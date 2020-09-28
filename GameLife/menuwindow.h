@@ -2,6 +2,8 @@
 #define MENUWINDOW_H
 
 #include <QWidget>
+#include "workwindow.h"
+
 
 namespace Ui {
 class MenuWindow;
@@ -16,6 +18,9 @@ public:
     ~MenuWindow();
 
     static std::shared_ptr<MenuWindow> instance();
+
+private slots:
+    void on_pushButtonPlay_clicked();
 
 private:
     Ui::MenuWindow *ui;

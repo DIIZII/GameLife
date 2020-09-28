@@ -24,3 +24,9 @@ std::shared_ptr<MenuWindow> MenuWindow::instance()
     }
     return m_instance;
 }
+
+void MenuWindow::on_pushButtonPlay_clicked()
+{
+    this->close();//hide
+    WorkWindow::instance()->show();
+}
