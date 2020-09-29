@@ -33,6 +33,8 @@ private slots:
 
     void on_pushButtonStartStop_clicked();
 
+    void on_pushButtonClear_clicked();
+
 private:
     Ui::WorkWindow *ui;
 

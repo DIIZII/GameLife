@@ -220,3 +220,16 @@ void WorkWindow::on_pushButtonStartStop_clicked()
         std::cout << step << std::endl;
     }
 }
+
+void WorkWindow::on_pushButtonClear_clicked()
+{
+    for(size_t i = 0; i < value_sizeX; i++)
+    {
+        for(size_t j = 0; j < value_sizeY; j++)
+        {
+            QDynamicButton *buttonRes = qobject_cast<QDynamicButton*>(ui->gridLayoutView->itemAtPosition(i,j)->widget());
+            buttonRes->Live = 0;
+        }
+    }
+    updatefield();
+}
