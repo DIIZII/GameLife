@@ -2,8 +2,10 @@
 #define MENUWINDOW_H
 
 #include <QWidget>
+#include <QMessageBox>
 #include "workwindow.h"
-
+#include "roleswindow.h"
+#include "historywindow.h"
 
 namespace Ui {
 class MenuWindow;
@@ -21,6 +23,14 @@ public:
 
 private slots:
     void on_pushButtonPlay_clicked();
+
+    void on_pushButtonRoles_clicked();
+
+    void on_pushButtonHistory_clicked();
+
+    void on_pushButtonDeveloper_clicked();
+
+    void on_pushButton_5_clicked();
 
 private:
     Ui::MenuWindow *ui;

@@ -30,3 +30,28 @@ void MenuWindow::on_pushButtonPlay_clicked()
     this->close();//hide
     WorkWindow::instance()->show();
 }
+
+void MenuWindow::on_pushButtonRoles_clicked()
+{
+    this->close();
+    RolesWindow::instance()->show();
+}
+
+void MenuWindow::on_pushButtonHistory_clicked()
+{
+    this->close();
+    HistoryWindow::instance()->show();
+}
+
+void MenuWindow::on_pushButtonDeveloper_clicked()
+{
+    QMessageBox::about(this,"Разработчик","     DIIZII    (Дмитрий Зяблев)\nПрограмма сделанная за 2 дня(29 и 30 сентября 2020 года) с кучей багов((((\nКак я буду писать через 5 лет) проверим)))) ");
+}
+
+void MenuWindow::on_pushButton_5_clicked()
+{
+    QMessageBox::StandardButton reply = QMessageBox::question(this,"Выход","Вы действтельно хотите выйти из приложения",QMessageBox::Yes|QMessageBox::No);
+    if(reply == QMessageBox::Yes)
+        this->close();
+
+}
