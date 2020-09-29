@@ -6,15 +6,7 @@
 #include <iostream>
 
 #include "menuwindow.h"
-
-struct ValueDynamicButtons
-{
-    bool value;
-    size_t X;
-    size_t Y;
-};
-
-typedef std::pair<ValueDynamicButtons,std::shared_ptr<QPushButton>> dynamic_button;
+#include "qdynamicbutton.h"
 
 namespace Ui {
 class WorkWindow;
@@ -35,6 +27,10 @@ private slots:
 
     void on_pushButtonEnter_clicked();
 
+    void deleteButtons(); // СЛОТ-обработчик нажатия кнопки удаления
+
+    void slotGetNumber();           // СЛОТ для получения номера нажатой динамической кнопки
+
 private:
     Ui::WorkWindow *ui;
 
@@ -44,7 +40,6 @@ private:
     void buildfield();
     void clearfield();
 
-    std::vector<dynamic_button> vec_buttons;
     size_t value_sizeX;
     size_t value_sizeY;
 };

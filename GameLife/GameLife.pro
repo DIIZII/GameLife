@@ -19,11 +19,13 @@ SOURCES += \
     main.cpp \
     mainwnd_ws.cpp \
     menuwindow.cpp \
+    qdynamicbutton.cpp \
     workwindow.cpp
 
 HEADERS += \
     mainwnd_ws.h \
     menuwindow.h \
+    qdynamicbutton.h \
     workwindow.h
 
 # Default rules for deployment.
