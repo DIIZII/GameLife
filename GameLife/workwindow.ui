@@ -36,6 +36,15 @@
        </item>
        <item>
         <widget class="QSpinBox" name="spinBoxX">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="keyboardTracking">
+          <bool>true</bool>
+         </property>
          <property name="minimum">
           <number>10</number>
          </property>
@@ -52,6 +61,9 @@
        </item>
        <item>
         <widget class="QSpinBox" name="spinBoxY">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="minimum">
           <number>10</number>
          </property>
@@ -88,7 +100,7 @@
           </size>
          </property>
          <property name="text">
-          <string>Старт/Стоп</string>
+          <string>Старт</string>
          </property>
         </widget>
        </item>

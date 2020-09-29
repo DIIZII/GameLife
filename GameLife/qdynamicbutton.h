@@ -12,6 +12,12 @@ public:
     static int ResID;   // Статическая переменная, счетчик номеров кнопок
     int getID();        // Функция для возврата локального номера кнопки
     bool Live = false;
+    bool NextLive = Live;
+    size_t NeighborsLive = 0;
+
+    size_t CheckSize(size_t Count, size_t Size);
+
+    bool ResultStep(size_t Result, bool Live);
 
 public slots:
 

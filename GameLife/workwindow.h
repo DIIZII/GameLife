@@ -31,6 +31,8 @@ private slots:
 
     void slotGetNumber();           // СЛОТ для получения номера нажатой динамической кнопки
 
+    void on_pushButtonStartStop_clicked();
+
 private:
     Ui::WorkWindow *ui;
 
@@ -39,9 +41,12 @@ private:
 
     void buildfield();
     void clearfield();
+    void updatefield();
 
     size_t value_sizeX;
     size_t value_sizeY;
+
+    void NextStepGame();
 };
 
 void WorkWindowDelFunc(WorkWindow *p);
