@@ -8,6 +8,11 @@ WorkWindow::WorkWindow(QWidget *parent) :
     ui->setupUi(this);
 
     buildfield();
+
+    connect(&thread, &QThread::started, this, &WorkWindow::rungame);
+    connect(this, &WorkWindow::finished, &thread, &QThread::terminate);
+    this->moveToThread(&thread);
+
 }
 
 WorkWindow::~WorkWindow()
@@ -25,6 +30,20 @@ std::shared_ptr<WorkWindow> WorkWindow::instance()
         m_instance.reset(new WorkWindow, WorkWindowDelFunc);
     }
     return m_instance;
+}
+
+bool WorkWindow::running() const
+{
+    return m_running;
+}
+
+void WorkWindow::setRunning(bool running)
+{
+    if (m_running == running)
+            return;
+
+    m_running = running;
+    emit runningChanged(running);
 }
 
 void WorkWindow::on_pushButtonBack_clicked()
@@ -206,19 +225,20 @@ void WorkWindow::slotGetNumber()
 void WorkWindow::on_pushButtonStartStop_clicked()
 {
     if(ui->pushButtonStartStop->text() == "Старт")
+    {
         ui->pushButtonStartStop->setText("Стоп");
+        setRunning(true);
+        thread.start();
+    }
     else if(ui->pushButtonStartStop->text() == "Стоп")
+    {
         ui->pushButtonStartStop->setText("Старт");
+        setRunning(false);
+    }
     else
         std::cout << "Error" << std::endl;
 
-    int step = 0;
-    while (step < 1000)
-    {
-        NextStepGame();
-        step++;
-        std::cout << step << std::endl;
-    }
+    rungame();
 }
 
 void WorkWindow::on_pushButtonClear_clicked()
@@ -232,4 +252,23 @@ void WorkWindow::on_pushButtonClear_clicked()
         }
     }
     updatefield();
+}
+
+void WorkWindow::rungame()
+{
+//    int step = 0;
+//    while (step < 1000)
+//    {
+//        NextStepGame();
+//        step++;
+//        std::cout << step << std::endl;
+//    }
+    int step = 0;
+    while(m_running)
+    {
+        NextStepGame();
+        step++;
+        std::cout << step << std::endl;
+    }
+    emit finished();
 }
