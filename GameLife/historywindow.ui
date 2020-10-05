@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HistoryWindow</class>
+ <widget class="QWidget" name="HistoryWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>759</width>
+    <height>539</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout" rowstretch="1,20,0">
+     <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="10,1">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Назад</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <widget class="QTextEdit" name="textEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;h2 align=&quot;center&quot; style=&quot; margin-top:15px; margin-bottom:4px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:130%;&quot;&gt;&lt;a name=&quot;Происхождение&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Linux Libertine','Georgia','Times','serif'; font-size:14pt; font-weight:600; color:#000000;&quot;&gt;П&lt;/span&gt;&lt;span style=&quot; font-family:'Linux Libertine','Georgia','Times','serif'; font-size:14pt; font-weight:600; color:#000000;&quot;&gt;роисхождение&lt;/span&gt;&lt;/h2&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:9px; margin-bottom:9px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:14pt; color:#000000;&quot;&gt;Джон Конвей заинтересовался проблемой, предложенной в 1940-x годах известным математиком Джоном фон Нейманом, который пытался создать гипотетическую машину, которая может воспроизводить сама себя. Джону фон Нейману удалось создать математическую модель такой машины с очень сложными правилами. Конвей попытался упростить идеи, предложенные Нейманом, и в конце концов ему удалось создать правила, которые стали правилами игры «Жизнь».&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:9px; margin-bottom:9px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:14pt; color:#000000;&quot;&gt;Впервые описание этой игры было опубликовано в октябрьском (1970 год) выпуске журнала Scientific American, в рубрике «Математические игры» Мартина Гарднера (&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:14pt; font-style:italic; color:#000000;&quot;&gt;Martin Gardner&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:14pt; color:#000000;&quot;&gt;).&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:9px; margin-bottom:9px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;Компьютерная_реализация&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Linux Libertine','Georgia','Times','serif'; font-size:14pt; color:#000000;&quot;&gt;К&lt;/span&gt;&lt;span style=&quot; font-family:'Linux Libertine','Georgia','Times','serif'; font-size:14pt; color:#000000;&quot;&gt;омпьютерная реализация&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:9px; margin-bottom:9px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:14pt; color:#000000;&quot;&gt;В компьютерных реализациях игры поле ограничено и (как правило) верхняя граница поля «соединена» с нижней, а левая граница — с правой, что представляет собой эмуляцию поверхности тора , но на экране поле всегда отображается в виде равномерной сетки.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:9px; margin-bottom:9px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:14pt; color:#000000;&quot;&gt;Простейший алгоритм «смены поколения» последовательно просматривает все ячейки решётки и для каждой ячейки подсчитывает соседей, определяя судьбу каждой клетки (не изменится, умрёт, родится). Такой простейший алгоритм использует два двумерных массива — один для текущего поколения, второй — для следующего.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:9px; margin-bottom:9px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:14pt; color:#000000;&quot;&gt;Более сложный, но и более быстрый алгоритм составляет списки клеток для просмотра в последующем поколении; клетки, которые не могут измениться, в списки не вносятся. Например, если какая-либо клетка и ни одна из её соседей не поменялись на предыдущем ходу, то эта клетка не поменяется и на текущем ходу.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
